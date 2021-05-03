@@ -387,3 +387,117 @@ Restricciones: 3 - Opciones generales: Ingresar al Menú Principal por medio de 
                          4.4 - Salir: Salir del programa, debe almacenar toda la información para que sean datos persistentes.
                                       Se debe mantener para los siguientes usos del programa.
 """
+
+def menuPrincipal():
+    print("3 - Opciones administrativas.")
+    print("4 - Opciones de usuario normal.")
+    print("4.4 - Salir.")
+    opciones = input("")
+    
+    if (opciones == '3'):
+        print("3.1 - Gestión de empresas.")
+        print("3.2 - Gestión de transporte por empresa.")
+        print("3.3 - Gestión de viaje.")
+        print("3.4 - Consultar el historial de reservaciones.")
+        print("3.5 - Estadísticas de viaje.")
+        opciones == input('')
+
+        if (opciones == '3.1'):
+            print("Gestión de empresas.")
+            cedulaJuridica = int(input("Cédula jurídica: "))
+            nombre = str(input("Nombre: "))
+            ubicacion = str(input("Ubicación del negocio: "))
+
+        elif (opciones == '3.2'):
+            print("Gestión de transporte por empresa.")
+            placa = str(input("Placa: "))
+            marca = str(input("Marca: "))
+            modelo = str(input("Modelo: "))
+            año = str(input("Año: "))
+            empresa = str(input("Empresa: "))
+            cantidadDeAsientosVIP = int(input("Cantidad de asientos clase VIP: "))
+            cantidadDeAsientosNormal = int(input("Cantidad de asientos clase normal: "))
+            cantidadeAsientosEconómica = int(input("Cantidad de clase económica: "))
+
+        elif (opciones == '3.3'):
+            print("Gestión de viaje.")
+            numeroDeViaje = print("")
+            ciudadDeSalida = str(input("Ciudad de salida: "))
+            fechaYhoraDeSalida = str(input("Fecha y hora de salida: "))
+            ciudadDellegada = str(input("Ciudad de llegada: "))
+            fechaYhoraDellegada = str(input("Fecha y hora de llegada: "))
+            empresaYtransporte = print("")
+            precioDeAsientosVIP = str(input("Monto de asientos clase VIP: "))
+            precioDeAsientosNormal = str(input("Monto de asientos clase normal: "))
+            precioDeAsientosEconomica = str(input("Monto de asientos clase económica: "))
+
+        elif (opciones == '3.4'):
+            print("Consultar el historial de reservaciones.")
+            identificador = print("Identificador: ")
+            nombreReservador = print("Nombre de la persona que reserva: ")
+            numeroDeViaje = print("Número de viaje: ")
+            fechaYhoraDeLaReservacion = print("Fecha y hora de la reservación: ")
+            empresa,transporte = print("Empresa, transporte: ")
+            lugar,fechaYhorasalida = print("Lugar, fecha y hora de salida: ")
+            lugar,fechaYhorallegada = print("Lugar, fecha y hora de llegada: ")
+            cantidadDeAsientosReservadosVIP = print("Cantidad de asientos reservados en clase VIP: ")
+            cantidadDeAsientosReservadosNormal = print("Cantidad de asientos reservados en clase normal: ")
+            cantidadDeAsientosReservadosEconomica = print("Cantidad de asientos reservados en clase económica: ")
+            montoDeReservación = print("Monto de resevación: ")
+
+        elif (opciones == '3.5'):
+            print("Estadísticas de viajes.")
+            numeroDeViaje = print("Número de viaje: ")
+            empresa,transporte = print("Empresa y transporte: ")
+            lugar,fechaYhorasalida = print("Lugar, fecha y hora salida: ")
+            lugar,fechaYhorallegada = print("Lugar, fecha y hora llegada: ")
+            cantidadDeAsientosVIP = print("Cantidad de asientos clase VIP reservados y asientos clase VIP disponibles: \n")
+            cantidadDeAsientosNormal = print("Cantidad de asientos clase normal reservados y asientos clase normal disponibles: \n")
+            cantidadDeAsientosEconomico = print("Cantidad de asientos clase económico reservados y asientos clase económico disponibles: \n")
+            costoBoletoVIP = print("Costo por boleto clase VIP: ")
+            costoBoletoNormal = print("Costo por boleto clase normal: ")
+            costoBoletoEconomico = print("Costo por boleto clase económico: ")
+            recaudacion = print("Monto recaudado por el viaje: ")
+
+        else:
+            return print("Error: Este dígito no es reconocido por el sistema.")
+    elif (opciones == '4'):
+        print("4.1 - Consulta de viajes.")
+        print("4.2 - Reservación de viaje.")
+        print("4.3 - Cancelación de reservación.")
+        print("4.4 - Salir")
+        opciones = input("")
+
+        if (opciones == '4.1'):
+            print("Consulta de viajes")
+            print("Número de viaje: ")
+            print("Ciudad de salida: ")
+            print("Fecha y hora de salida: ")
+            print("Ciudad de llegada: ")
+            print("Fecha y hora de llegada: ")
+            print("Empresa y transporte: ")
+            print("Monto clase VIP: ")
+            print("Monto clase normal: ")
+            print("Monto clase económica: ")
+
+        if (opciones == '4.2'):
+            print("Reservación de viaje.")
+            nombre = str(input("Nombre: "))
+            espaciosPorReservar = str(input("Cantidad de espacios a reservar: \nClase VIP: \nClase normal: \nClase económica: "))
+            identificador = print("")
+            nombreDeLaPersonaReservadora = str(input("Nombre de la persona que reserva: "))
+            fechaYhoraDeLaReservación = print("")
+            empresa = str(input("Empresa: "))
+            transporte = str(input("Transporte: "))
+            fechasYhoras = str(input("Lugar, fecha y hora de salida: \nLugar, fecha y hora de llegada"))
+            asientosReservadosVIP = str(input("Cantidad de asientos reservados clase VIP: "))
+            asientosReservadosNormal = str(input("Cantidad de asientos clase normal: "))
+            asientosReservadosEconomica = str(input("Cantidad de asienstos clase económica: "))
+            montoDeReservación = print("")
+
+        if (opciones == '4.3'):
+            print("Cancelación de reservación")
+            identificador = str(input("Identificador: "))
+
+        if (opciones == '4.4'):
+            return print("Hasta pronto.")
